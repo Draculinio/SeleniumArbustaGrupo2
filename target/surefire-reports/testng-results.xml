@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-02-26T14:11:38 ART" name="Command line suite" finished-at="2020-02-26T14:12:19 ART" duration-ms="40641">
+    <groups>
+    </groups>
+    <test started-at="2020-02-26T14:11:38 ART" name="Command line test" finished-at="2020-02-26T14:12:19 ART" duration-ms="40641">
+      <class name="testCases.SearchTest">
+        <test-method signature="searchWithNoResults()[pri:0, instance:testCases.SearchTest@a38d7a3]" started-at="2020-02-26T14:11:38 ART" name="searchWithNoResults" finished-at="2020-02-26T14:11:52 ART" duration-ms="13817" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchWithNoResults -->
+        <test-method signature="searchWithResults()[pri:0, instance:testCases.SearchTest@a38d7a3]" started-at="2020-02-26T14:11:52 ART" name="searchWithResults" finished-at="2020-02-26T14:12:07 ART" duration-ms="15112" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchWithResults -->
+      </class> <!-- testCases.SearchTest -->
+      <class name="testCases.SectionsTest">
+        <test-method signature="womanSection()[pri:0, instance:testCases.SectionsTest@77f99a05]" started-at="2020-02-26T14:12:07 ART" name="womanSection" finished-at="2020-02-26T14:12:19 ART" duration-ms="11625" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- womanSection -->
+      </class> <!-- testCases.SectionsTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>
