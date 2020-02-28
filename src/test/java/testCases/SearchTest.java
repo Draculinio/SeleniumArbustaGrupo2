@@ -4,47 +4,47 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import helpers.Waiters;
+import pageObjects.IndexPage;
+import pageObjects.ItemsPage;
 
 public class SearchTest {
 	
 	private WebDriver driver;
-	
+	ItemsPage itemsPage;
+	IndexPage indexPage;
 	@BeforeMethod
 	public void setUp() {
 		System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
 		driver = new ChromeDriver();
+		itemsPage = new ItemsPage(driver);
+		indexPage = new IndexPage(driver);
 		driver.navigate().to("http://automationpractice.com/");
 	}
 	
-	@Test
-	public void searchWithResults() {
-		driver.findElement(By.id("search_query_top")).sendKeys("Dresses");
-		driver.findElement(By.name("submit_search")).click();
-		try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		String searchTitle = driver.findElement(By.xpath("//span[@class='lighter']")).getText();
-		Assert.assertTrue(searchTitle.contains("DRES"),"Expected: "+searchTitle);
+	@AfterMethod
+	public void tearDown() {
 		driver.close();
 		driver.quit();
 	}
 	
-	@Test
+	@Test(enabled = false)
+	public void searchWithResults() {
+		indexPage.search("Dress");
+		//String searchTitle = itemsPage.getTitleText();
+		//Assert.assertTrue(searchTitle.contains("DRES"),"Expected: "+searchTitle);
+		Assert.assertTrue(itemsPage.getTitleText().contains("DRES"),"Expected: "+itemsPage.getTitleText());
+	}
+	
+	@Test(enabled = false)
 	public void searchWithNoResults() {
-		driver.findElement(By.id("search_query_top")).sendKeys("dfgsfhkjgfh");
-		driver.findElement(By.name("submit_search")).click();
-		try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		String noElements = driver.findElement(By.xpath("//*[@id='center_column']/p")).getText();
-		Assert.assertTrue(noElements.contains("dfgsfhkjgfh"));
+		indexPage.search("dlsfkjflsdkfj");
+		/*String noElements = itemsPage.getNoResultsText();
+		Assert.assertTrue(noElements.contains("dfgsfhkjgfh"));*/
+		Assert.assertTrue(itemsPage.getNoResultsText().contains("dlsfkjflsdkfj"));
 	}
 }
