@@ -1,5 +1,7 @@
 package testCases;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,28 +14,12 @@ import helpers.Waiters;
 import pageObjects.IndexPage;
 import pageObjects.ItemsPage;
 
-public class SearchTest {
+public class SearchTest extends Commons {
 	
-	private WebDriver driver;
-	ItemsPage itemsPage;
-	IndexPage indexPage;
-	@BeforeMethod
-	public void setUp() {
-		System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
-		driver = new ChromeDriver();
-		itemsPage = new ItemsPage(driver);
-		indexPage = new IndexPage(driver);
-		driver.navigate().to("http://automationpractice.com/");
-	}
-	
-	@AfterMethod
-	public void tearDown() {
-		driver.close();
-		driver.quit();
-	}
 	
 	@Test(enabled = false)
 	public void searchWithResults() {
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		indexPage.search("Dress");
 		//String searchTitle = itemsPage.getTitleText();
 		//Assert.assertTrue(searchTitle.contains("DRES"),"Expected: "+searchTitle);
@@ -42,6 +28,7 @@ public class SearchTest {
 	
 	@Test(enabled = false)
 	public void searchWithNoResults() {
+		driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
 		indexPage.search("dlsfkjflsdkfj");
 		/*String noElements = itemsPage.getNoResultsText();
 		Assert.assertTrue(noElements.contains("dfgsfhkjgfh"));*/

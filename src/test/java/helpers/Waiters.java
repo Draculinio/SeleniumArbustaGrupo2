@@ -12,11 +12,6 @@ public class Waiters {
 	}
 	
 	public static void fixedWait() {
-		try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		Waiters.wait(3000);
 	}
 }

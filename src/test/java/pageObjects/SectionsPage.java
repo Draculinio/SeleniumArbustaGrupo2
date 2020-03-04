@@ -5,12 +5,13 @@ import org.openqa.selenium.WebDriver;
 
 public class SectionsPage {
 	WebDriver driver;
-	private String sectionBanner = "//span[@class='cat-name']";
+	private By sectionBanner;
 	public SectionsPage(WebDriver driver) {
 		this.driver = driver;
+		sectionBanner = By.xpath("//span[@class='cat-name']");
 	}
 	
 	public String getSectionText(){
-		return driver.findElement(By.xpath(sectionBanner)).getText();
+		return driver.findElement(sectionBanner).getText();
 	}
 }

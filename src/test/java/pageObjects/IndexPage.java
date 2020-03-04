@@ -6,23 +6,26 @@ import org.openqa.selenium.WebDriver;
 import helpers.Waiters;
 
 public class IndexPage {
-	private String searchBox = "search_query_top";
-	private String submitButton = "submit_search";
-	private String womenLink = "Women";
+	private By searchBox;
+	private By submitButton;
+	private By womenLink;
 	WebDriver driver;
 	
 	public IndexPage(WebDriver driver) {
 		this.driver = driver;
+		searchBox = By.id("search_query_top");
+		submitButton = By.name("submit_search");
+		womenLink = By.linkText("Women");
 	}
 	
 	public void search(String item) {
-		driver.findElement(By.id(searchBox)).sendKeys(item);
-		driver.findElement(By.name(submitButton)).click();
+		driver.findElement(searchBox).sendKeys(item);
+		driver.findElement(submitButton).click();
 		Waiters.fixedWait();
 	}
 	
 	public void goToWomen() {
-		driver.findElement(By.linkText("Women")).click();
+		driver.findElement(womenLink).click();
 		Waiters.fixedWait();
 	}
 }
