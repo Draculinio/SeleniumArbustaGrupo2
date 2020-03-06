@@ -9,12 +9,13 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Command line suite</th></tr>
-<tr><td><a href="#t0">Command line test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">38.184</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Command line test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">10.489</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Command line suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Command line test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">testCases.SelectTest</td><td><a href="#m0">searchByInStock</a></td><td rowspan="1">1582909807382</td><td rowspan="1">1568</td></tr><tr class="passedeven"><td><a href="#m1">searchByLowestFirst</a></td><td rowspan="1">1582909820293</td><td rowspan="1">2398</td></tr><tr class="passedeven"><td><a href="#m2">searchByNameAtoZ</a></td><td rowspan="1">1582909832447</td><td rowspan="1">1468</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Command line suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Command line test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testCases.SelectTest</td><td><a href="#m0">searchByInStock</a></td><td rowspan="1">1583515206089</td><td rowspan="1">1812</td></tr></tbody>
 </table>
-<h2>Command line test</h2><h3 id="m0">testCases.SelectTest#searchByInStock</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">testCases.SelectTest#searchByLowestFirst</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">testCases.SelectTest#searchByNameAtoZ</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Command line test</h2><h3 id="m0">testCases.SelectTest#searchByInStock</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [2] but found [1]
+	at testCases.SelectTest.searchByInStock(SelectTest.java:21)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+... Removed 42 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

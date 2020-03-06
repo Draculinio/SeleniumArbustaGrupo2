@@ -3,16 +3,13 @@
 <suite name="Failed suite [Command line suite]" verbose="0">
   <test thread-count="5" name="Command line test(failed)" verbose="0">
     <classes>
-      <class name="testCases.SectionsTest">
+      <class name="testCases.SelectTest">
         <methods>
-          <include name="womanSection"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="searchByInStock"/>
         </methods>
-      </class> <!-- testCases.SectionsTest -->
-      <class name="testCases.SearchTest">
-        <methods>
-          <include name="searchWithResults"/>
-        </methods>
-      </class> <!-- testCases.SearchTest -->
+      </class> <!-- testCases.SelectTest -->
     </classes>
   </test> <!-- Command line test(failed) -->
 </suite> <!-- Failed suite [Command line suite] -->

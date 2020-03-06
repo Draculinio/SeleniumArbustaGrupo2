@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="TestSuite" time="5.433" errors="0" skipped="0">
+<testsuite tests="1" failures="1" name="TestSuite" time="1.818" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="13+33"/>
@@ -60,7 +60,52 @@
     <property name="sun.stdout.encoding" value="cp437"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="testCases.SelectTest" name="searchByInStock" time="1.568"/>
-  <testcase classname="testCases.SelectTest" name="searchByLowestFirst" time="2.398"/>
-  <testcase classname="testCases.SelectTest" name="searchByNameAtoZ" time="1.467"/>
+  <testcase classname="testCases.SelectTest" name="searchByInStock" time="1.818">
+    <failure message="expected [2] but found [1]" type="java.lang.AssertionError">java.lang.AssertionError: expected [2] but found [1]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:839)
+	at org.testng.Assert.assertEquals(Assert.java:849)
+	at testCases.SelectTest.searchByInStock(SelectTest.java:21)
+</failure>
+    <system-out>Configuring TestNG with: org.apache.maven.surefire.testng.conf.TestNG652Configurator@21a06946
+Windows 10
+</system-out>
+    <system-err>Starting ChromeDriver 80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}) on port 29975
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+mar. 06, 2020 2:20:01 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+[1583515203.364][SEVERE]: Timed out receiving message from renderer: 0.100
+[1583515203.466][SEVERE]: Timed out receiving message from renderer: 0.100
+[1583515203.568][SEVERE]: Timed out receiving message from renderer: 0.100
+[1583515203.669][SEVERE]: Timed out receiving message from renderer: 0.100
+[1583515203.770][SEVERE]: Timed out receiving message from renderer: 0.100
+[1583515203.872][SEVERE]: Timed out receiving message from renderer: 0.100
+[1583515203.973][SEVERE]: Timed out receiving message from renderer: 0.100
+[1583515204.074][SEVERE]: Timed out receiving message from renderer: 0.100
+[1583515204.180][SEVERE]: Timed out receiving message from renderer: 0.100
+[1583515204.282][SEVERE]: Timed out receiving message from renderer: 0.100
+[1583515204.383][SEVERE]: Timed out receiving message from renderer: 0.100
+[1583515204.484][SEVERE]: Timed out receiving message from renderer: 0.100
+[1583515204.585][SEVERE]: Timed out receiving message from renderer: 0.100
+[1583515204.687][SEVERE]: Timed out receiving message from renderer: 0.100
+[1583515204.788][SEVERE]: Timed out receiving message from renderer: 0.100
+[1583515204.935][SEVERE]: Timed out receiving message from renderer: 0.100
+[1583515205.036][SEVERE]: Timed out receiving message from renderer: 0.100
+[1583515205.139][SEVERE]: Timed out receiving message from renderer: 0.100
+[1583515205.420][SEVERE]: Timed out receiving message from renderer: 0.100
+[1583515205.696][SEVERE]: Timed out receiving message from renderer: 0.100
+[1583515205.798][SEVERE]: Timed out receiving message from renderer: 0.100
+[1583515205.902][SEVERE]: Timed out receiving message from renderer: 0.100
+[1583515206.028][SEVERE]: Timed out receiving message from renderer: 0.100
+[1583515207.349][SEVERE]: Timed out receiving message from renderer: 0.100
+[1583515207.454][SEVERE]: Timed out receiving message from renderer: 0.100
+[1583515207.556][SEVERE]: Timed out receiving message from renderer: 0.100
+[1583515207.657][SEVERE]: Timed out receiving message from renderer: 0.100
+[1583515207.759][SEVERE]: Timed out receiving message from renderer: 0.100
+[1583515207.861][SEVERE]: Timed out receiving message from renderer: 0.100
+</system-err>
+  </testcase>
 </testsuite>
